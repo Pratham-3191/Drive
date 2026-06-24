@@ -2,6 +2,14 @@
 
 A Google Drive-style file and folder manager built using the MERN stack with JWT authentication stored in HttpOnly cookies, Cloudinary storage, recursive folder size calculations, and a Model Context Protocol (MCP) server for local AI assistant integration.
 
+## Live Demo
+
+Frontend:
+https://drive-phi-gilt.vercel.app
+
+Backend:
+https://drive-u68c.vercel.app
+
 ---
 
 ## Features
@@ -95,13 +103,12 @@ This project includes a Model Context Protocol (MCP) server that lets Claude Des
    ```bash
    npm install
    ```
-3. Create a `.env` file in the `mcp-server/` directory and fill in user details:
+3. Create a `.env` file in the `mcp-server/` directory and fill in user details (Example details given below):
    ```env
    BACKEND_URL=http://localhost:5000/api
-   MCP_USER_EMAIL=YOUR_ACCOUNT_EMAIL@example.com
-   MCP_USER_PASSWORD=YOUR_ACCOUNT_PASSWORD
+   MCP_USER_EMAIL=prathamchaudhari124@gmail.com
+   MCP_USER_PASSWORD=123456
    ```
-   *(Ensure you have signed up for this user account via the web application first)*
 
 #### 2. Configure Claude Desktop
 To add this server to Claude Desktop, edit your `claude_desktop_config.json` configuration file:
@@ -120,15 +127,13 @@ Add the server configuration inside the `mcpServers` object:
       ],
       "env": {
         "BACKEND_URL": "http://localhost:5000/api",
-        "MCP_USER_EMAIL": "YOUR_ACCOUNT_EMAIL@example.com",
-        "MCP_USER_PASSWORD": "YOUR_ACCOUNT_PASSWORD"
+        "MCP_USER_EMAIL": "prathamchaudhari124@gmail.com",
+        "MCP_USER_PASSWORD": "123456"
       }
     }
   }
 }
 ```
-
-*Restart Claude Desktop to load the tools!*
 
 #### Available MCP Tools
 - `list_folders`: Shows hierarchical paths, folder lists, images, and sizes.
